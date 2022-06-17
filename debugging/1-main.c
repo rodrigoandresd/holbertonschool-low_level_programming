@@ -17,7 +17,7 @@ int main(void)
 	{
 		putchar(i);/* i never increments so it is always going to print 0 */
 	}
-
+	i++;
 	printf("Infinite loop avoided! \\o/\n");
 
 	return (0);
