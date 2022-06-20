@@ -9,13 +9,23 @@
 
 void print_diagonal(int n)
 {
-	char space;
+	int space, line;
 
-for (space = 0 ; space < n ; space++)
+	if (n <= 0)
+		_putchar('\n');
+	else
 	{
-	_putchar(' ');
+		for (line = 0 ; line < n ; line++)
+		{
+			for (space = 0 ; space < n ; space++)
+			{
+				if (space == line)
+					_putchar('\\');
+				else if (space < line)
+				_putchar(' ');
+			}
+		_putchar('\n');
+		}
 	}
-_putchar('\\');
-_putchar('\n');
 }
 
