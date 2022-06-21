@@ -1,7 +1,7 @@
 #include <stdio.h>
 
  /**
-  * reset_to_98 - funtion takes a pointer to an int
+  * reset_to_98 -funtion takes a pointer to an int 
   * @n: variable puntero
   * return: (0)
   */
