@@ -9,27 +9,29 @@
 
 void print_triangle(int size)
 {
-	int line, column;
+	int line = 0; 
+	int spaces;
+	int hashes;
 
-	if (size <= 0)
-		_putchar('\n');
-	else
+	if (size > 0)
 	{
-		for (line = 1 ; line <= size ; line++)
+		while (line < size)
 		{
-			for (column = 1 ; column < size ; column++)
+			for (spaces = size - 1 ; spaces > line ; spaces--)
 			{
-
 				_putchar(' ');
 			}
-			for (column = 1 ; column <= line ; column++)
+			for (hashes = 0 ; hashes < line + 1 ; hashes++)
                         {
-
-                                _putchar('#');
+				_putchar('#');
                         }
-
-		_putchar('\n');
+			_putchar('\n');
+			line++;
 		}
+	}
+	else
+	{
+		_putchar('\n');
 	}
 }
 
