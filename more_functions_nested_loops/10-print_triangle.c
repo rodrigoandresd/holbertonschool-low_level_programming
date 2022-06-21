@@ -9,7 +9,7 @@
 
 void print_triangle(int size)
 {
-	int line = 0; 
+	int line = 0;
 	int spaces;
 	int hashes;
 
@@ -22,9 +22,9 @@ void print_triangle(int size)
 				_putchar(' ');
 			}
 			for (hashes = 0 ; hashes < line + 1 ; hashes++)
-                        {
+			{
 				_putchar('#');
-                        }
+			}
 			_putchar('\n');
 			line++;
 		}
