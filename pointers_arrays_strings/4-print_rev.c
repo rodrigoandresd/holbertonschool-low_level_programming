@@ -18,6 +18,5 @@ int letter = 0;
 			putchar(s[letter]);
 		}
 		putchar('\n');
-	
 }
 
