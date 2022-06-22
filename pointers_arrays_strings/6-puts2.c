@@ -2,7 +2,7 @@
 #include "main.h"
 
 /**
- * puts - prints a number
+ * puts2 - prints a number %two
  * @str: imput
  * Return: 0
  */
