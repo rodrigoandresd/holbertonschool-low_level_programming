@@ -12,7 +12,7 @@ void print_array(int *a, int n)
 {
 	int imput;
 
-	for (imput = 0 ; imput < 5 ; imput++)
+	for (imput = 0 ; imput < n ; imput++)
 	{
 	if (imput != (n - 1))
 		printf("%d, ", a[imput]);
