@@ -17,7 +17,11 @@ void puts_half(char *str)
 		input++;
 	}
 	max = input;
-	half = max / 2;
+	if (max % 2 == 0)
+		half = max / 2;
+	else
+		half = (max + 1) / 2;
+
 	while (half <= max)
 	{
 		putchar(str[half]);
