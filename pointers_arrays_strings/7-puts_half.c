@@ -22,10 +22,9 @@ void puts_half(char *str)
 	else
 		half = (max + 1) / 2;
 
-	while (half <= max)
+	for (input = half ; input <= max ; input++)
 	{
-		putchar(str[half]);
-		half++;
+		putchar(str[input]);
 	}
 	putchar('\n');
 }
