@@ -3,20 +3,29 @@
 
 /**
  * rev_string -  prints a string in rev
- * @s: phrase
+ * @s: imput
  * Return: 0
  */
 
 void rev_string(char *s)
 {
-int letter = 0;
-	for (letter = 0 ; s[letter] != '\0' ; letter++)
-	{	
+	char rev;
+	int  right, half, tmp;
+
+	right = 0;
+
+	while (s[right] != '\0')
+	{
+		right++;
 	}
-		for (letter = letter - 1 ; letter >= 0 ; letter--)
-		{
-		putchar(s[letter]);
-		}
-putchar('\n');
+
+	half = right - 1;
+
+	for (tmp = 0; tmp < right / 2; tmp++)
+	{
+		rev = s[tmp];
+		s[tmp] = s[half];
+		s[half--] = rev;
+	}
 }
 
