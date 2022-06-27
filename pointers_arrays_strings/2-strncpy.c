@@ -5,7 +5,7 @@
  * _strncpy - function that copies the string pointed to by src
  * @dest:  buffer pointed
  * @src: string pointed to by src
- * @n: number
+ * @n: number of bytes from src
  * Return: dest
  */
 
@@ -17,6 +17,7 @@ for (i = 0; i < n && src[i] != '\0'; i++)
 {
 	dest[i] = src[i];
 }
+for (; i < n; i++)
 dest[i] = '\0';
 return (dest);
 }
