@@ -2,12 +2,12 @@
 #include "main.h"
 
 /**
- * *string_toupper - function that changes to uppercase.
+ * *cap_string - function that capitalizes all words of a string
  * @up: pointer
  * Return: up
  */
 
-char *string_toupper(char *up)
+char *cap_string(char *)
 {
 	int i;
 
@@ -17,7 +17,7 @@ char *string_toupper(char *up)
 	{
 		if (up[i] >= 'a' && up[i] <= 'z')
 			up[i] = up[i] - 32;
-		i++;
+		up++;
 	}
 	return (up);
 }
