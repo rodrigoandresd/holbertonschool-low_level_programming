@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include "main.h"
+int _sqrt(int x, int square);
 
 /**
  * _sqrt_recursion - returns the natural square root of a number
@@ -16,12 +17,12 @@ int _sqrt_recursion(int n)
 
 /**
  * _sqrt - funtion that find square root
- * @square: square of the root
+ * @root: square of the root
  * @x: number temporal
  * Return: square root
  */
 
-int _sqrt(int x, int square)
+int _sqrt(int x, int root)
 {
 	if (x > root)
 		return (-1);
