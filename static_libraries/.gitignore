@@ -1,0 +1,4 @@
+/* ignire this files by git */
+
+*.o
+*.c
