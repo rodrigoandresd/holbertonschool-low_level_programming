@@ -4,8 +4,8 @@
 
 /**
  * str_concat - function that concatenates two strings
- * @:s1
- * @:s2
+ * @s1: first string
+ * @s2: second string
  * Return:
  */
 
