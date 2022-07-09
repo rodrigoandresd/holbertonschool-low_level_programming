@@ -1,5 +1,4 @@
 #include "main.h"
-#include <stdio.h>
 #include <stdlib.h>
 /**
  * string_nconcat - concatenates two strings
@@ -29,9 +28,9 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	for ( k = 0 ; k < n ; k++)
 	{
 		if (k <= i)
-			s3[k] = s1[k];
-		if (k >= i)
-			s3[k] = s2[j];
+			s3[k] = *s1, s1++;
+		else
+			s3[k] = *s2, s2++;
 	}
 	s3[k] = '\0';
 	return (s3);
