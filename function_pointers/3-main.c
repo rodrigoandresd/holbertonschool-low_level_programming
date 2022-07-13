@@ -33,8 +33,8 @@ int main(int argc, char *argv[])
 		printf("Error\n");
 		exit(99);
 	}
-	sim = *(argv[2]);
-	if ((sim == '/' || sim == '%') && *(argv[3]) == '0')
+	sim = *argv[2];
+	if ((sim == '/' || sim == '%') && *argv[3] == '0')
 	{
 	printf("Error\n");
 		exit(100);
