@@ -22,12 +22,18 @@ int main(int argc, char *argv[])
 		printf("Error\n");
 		exit(98);
 	}
-
+	sim = *argv[2];
 	num1 = atoi(argv[1]);
 	num2 = atoi(argv[3]);
+
+	if ((sim == '/' || sim == '%') && num2 == 0)
+	{
+		printf("Error\n");
+		exit(100);
+	}
+
 	operation = get_op_func(argv[2]);
 	calc = operation(num1, num2);
-	sim = *argv[2];
 
 	if (operation == NULL)
 	{
@@ -35,11 +41,6 @@ int main(int argc, char *argv[])
 		exit(99);
 	}
 
-	if ((sim != '/' || sim != '%') && num2 == 0)
-	{
-		printf("Error\n");
-		exit(100);
-	}
 	printf("%d\n", calc);
 	return (0);
 }
