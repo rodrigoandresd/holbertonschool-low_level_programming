@@ -33,13 +33,13 @@ int main(int argc, char *argv[])
 	}
 
 	operation = get_op_func(argv[2]);
-	calc = operation(num1, num2);
 
 	if (operation == NULL)
 	{
 		printf("Error\n");
 		exit(99);
 	}
+	calc = operation(num1, num2);
 
 	printf("%d\n", calc);
 	return (0);
