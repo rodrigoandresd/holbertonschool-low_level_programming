@@ -33,4 +33,4 @@ void free_list(list_t *head);
 
 /* macros functions */
 
-#endif /* _LISTS_H/
+#endif /* _LISTS_H */
