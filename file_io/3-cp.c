@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
-  * free_file_from - freefile from in case error
+  * case_error_file_from - freefile from in case error
   * @file_from: name of file from
   * @buffer: buffer to free
   * Return: void
@@ -48,7 +48,7 @@ void case_error_close(int fd, char *buffer)
  */
 int copy_text_file(const char *file_from, char *file_to)
 {
-	int f_d_from, f_d_to, readed, writed;
+	int f_d_from, f_d_to, readed, writed, err;
 	char *buffer;
 
 	buffer = malloc(sizeof(char) * 1024);
@@ -75,8 +75,13 @@ int copy_text_file(const char *file_from, char *file_to)
 		if (writed == -1)
 			case_error_file_to(file_to, buffer);
 	}
-	close(f_d_from);
-	close(f_d_to);
+	err = close(f_d_from);
+	if (err == -1)
+		case_error_close(from, buffer);
+
+	err = close(f_d_to);
+	if (err == -1)
+		case_error_close(from, buffer);
 	free(buffer);
 	return (0);
 }
