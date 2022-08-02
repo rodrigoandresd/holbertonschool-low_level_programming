@@ -77,11 +77,11 @@ int copy_text_file(const char *file_from, char *file_to)
 	}
 	err = close(f_d_from);
 	if (err == -1)
-		case_error_close(from, buffer);
+		case_error_close(f_d_from, buffer);
 
 	err = close(f_d_to);
 	if (err == -1)
-		case_error_close(from, buffer);
+		case_error_close(f_d_to, buffer);
 	free(buffer);
 	return (0);
 }
