@@ -39,13 +39,13 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 			return (NULL);
 	}
 
+	if (i + 1 == idx && temp->next == NULL)
+		return (add_dnodeint_end(h, n));
+
 	newnode->prev = temp;
 	newnode->next = temp->next;
 	temp->next = newnode;
 	newnode->next->prev = newnode;
-	
-	if (i + 1 == idx && temp->next == NULL)
-		return (add_dnodeint_end(h, n));
 	
 	return (newnode);
 }
